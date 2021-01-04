@@ -1,0 +1,32 @@
+#Setting up mmsmtp file
+#Not sure how this got set succesfully at the end because I used a whole bunch of references
+https://doc.ubuntu-fr.org/msmtp
+and this
+https://hostpresto.com/community/tutorials/how-to-send-email-from-the-command-line-with-msmtp-and-mutt/
+Mostly because I got the idea from the following forum that I use mmsmtp instead of ssmtp
+https://www.raspberrypi.org/forums/viewtopic.php?f=28&t=244147
+
+sudo apt-get install msmtp msmtp-mta
+
+create a /var/log/msmtp.log
+
+sudo touch /var/log/msmtp.log
+chmod ugo+r /var/log/msmtp.log
+chmod ugo+w /var/log/msmtp.log
+
+sudo vi /etc/msmtprc
+
+account default
+auth on
+tls on
+tls_starttls on
+host smtp.gmail.com
+port 587
+from <the sender of the email address
+user <email address that authenicates on the google account>
+password <the password>
+
+tested with :
+sudo echo "Subject: subject test"  | msmtp <phonenumber>@pcs.rogers.com
+
+It works.
