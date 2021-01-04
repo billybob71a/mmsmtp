@@ -30,3 +30,10 @@ tested with :
 sudo echo "Subject: subject test"  | msmtp <phonenumber>@pcs.rogers.com
 
 It works.
+
+Or 
+
+You could do:
+
+echo "mail test1" | mail -s "test1" <phonenumber>@pcs.rogers.com
+
