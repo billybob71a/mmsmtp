@@ -37,3 +37,16 @@ You could do:
 
 echo "mail test1" | mail -s "test1" <phonenumber>@pcs.rogers.com
 
+-----------
+
+edit crontab
+
+pi@pi-zero-2:/sbin $ sudo crontab -e
+no crontab for root - using an empty one
+
+Select an editor.  To change later, run 'select-editor'.
+  1. /bin/nano        <---- easiest
+  2. /usr/bin/vim.tiny
+  3. /bin/ed
+
+Choose 1-3 [1]:
